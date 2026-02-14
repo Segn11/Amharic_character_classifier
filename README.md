@@ -1,37 +1,29 @@
-## 🇪🇹 Amharic Character Recognition using TensorFlow & PyTorch
+🇪🇹 Amharic Character Recognition using TensorFlow & PyTorch
+<p align="center"> <b>Deep Learning • Computer Vision • Multi-Class Classification • Framework Comparison</b> </p> <p align="center"> A complete end-to-end deep learning project that builds and compares CNN-based Amharic character classifiers using <b>TensorFlow</b> and <b>PyTorch</b>. </p>
+📌 Project Overview
 
-A deep learning project that builds and compares CNN-based Amharic character classifiers using both TensorFlow and PyTorch frameworks.
-This project performs a full pipeline from preprocessing to evaluation and provides a detailed comparative performance analysis.
+Amharic is a morphologically rich language containing 237 unique character classes, making character recognition a challenging large-scale multi-class classification problem.
 
-🚀 Project Overview
+This project implements the full deep learning pipeline:
 
-Amharic is a morphologically rich language with 237 unique character classes, making character recognition a challenging multi-class classification task.
+📦 Processed 37,652 grayscale images
 
-In this project:
+🧠 Built CNN architectures in TensorFlow and PyTorch
 
-📦 37,652 grayscale images were processed
+📊 Trained, validated, and tested both models
 
-🧠 CNN architectures were built in both TensorFlow and PyTorch
+⚖️ Compared performance using Accuracy & F1-score
 
-📊 Models were trained, validated, and evaluated
-
-⚖️ Performance was compared using Accuracy and F1-scores
-
-🔍 Class-wise performance was analyzed
+🔍 Conducted class-wise performance analysis
 
 📊 Dataset Information
-
-Total Images: 37,652
-
-Number of Classes: 237 Amharic characters
-
-Image Size: 64 × 64
-
-Color Format: Grayscale
-
-Normalization: Pixel values scaled to [0, 1]
-
-Data Split
+Property	Value
+Total Images	37,652
+Number of Classes	237
+Image Size	64 × 64
+Color Format	Grayscale
+Normalization	Pixel values scaled to [0, 1]
+📂 Data Split
 
 🟢 Training: 70%
 
@@ -41,7 +33,7 @@ Data Split
 
 🧠 Model Architecture
 
-Both frameworks used a similar Convolutional Neural Network (CNN) structure:
+Both frameworks use a similar Convolutional Neural Network (CNN) structure:
 
 Convolutional Layers
 
@@ -51,52 +43,50 @@ Max Pooling
 
 Fully Connected Layers
 
-Softmax Output (237 classes)
+Softmax Output Layer (237 classes)
 
-Total Trainable Parameters (TensorFlow Model): 1,655,149
+TensorFlow Model Parameters:
+1,655,149 trainable parameters
 
 📈 Model Performance Comparison
 Metric	TensorFlow	PyTorch
 Test Accuracy	73.96%	71.29%
 Macro F1-score	0.67	0.65
 Weighted F1-score	0.74	0.71
-🏆 Winner: TensorFlow (Slightly Better Overall Performance)
+🏆 Overall Winner: TensorFlow
+
+TensorFlow achieved slightly better generalization across all evaluation metrics.
+
 🔍 Detailed Observations
-✅ Overall Accuracy
+✅ Accuracy
 
-TensorFlow achieved 73.96%
+TensorFlow: 73.96%
 
-PyTorch achieved 71.29%
+PyTorch: 71.29%
 
 TensorFlow shows a small but consistent advantage.
 
 ✅ Macro F1-score
 
-TensorFlow: 0.67
-
-PyTorch: 0.65
-TensorFlow performs slightly better across all classes, including minority ones.
+TensorFlow performs slightly better across minority classes.
 
 ✅ Weighted F1-score
 
-TensorFlow: 0.74
-
-PyTorch: 0.71
-Indicates better performance considering class imbalance.
+Indicates better handling of class imbalance.
 
 🎯 Class-wise Performance Insights
 
-Some characters achieved very high F1-scores (0.95+)
+Some characters achieved F1-scores above 0.95
 
-Some characters performed poorly (F1-score close to 0.00)
+Some classes scored near 0.00
 
-Difficult characters include visually similar shapes
+Difficult classes include visually similar characters
 
 Performance variance suggests:
 
 Data imbalance
 
-Insufficient variation for certain characters
+Limited variation in some classes
 
 Intrinsic visual similarity challenges
 
@@ -106,7 +96,7 @@ TensorFlow
 Validation accuracy peaked at 75.05%
 
 Validation loss increased after epoch 5
-➡ Suggests overfitting
+➡ Indicates overfitting
 
 PyTorch
 
@@ -115,7 +105,7 @@ Validation accuracy peaked at 72.66%
 Slight decline after epoch 7
 ➡ Also shows overfitting trend
 
-🛠️ Key Challenges
+🛠 Key Challenges
 
 237-class multi-class classification problem
 
@@ -123,18 +113,18 @@ High inter-class similarity
 
 Class imbalance
 
-Font rendering issues in visualization (does not affect training)
+Visualization font rendering limitations
 
 💡 Future Improvements
 1️⃣ Reduce Overfitting
 
-Add Dropout layers
+Dropout layers
 
-Apply L1/L2 regularization
+L1/L2 regularization
 
-Implement Early Stopping
+Early Stopping
 
-Use stronger data augmentation
+Stronger data augmentation
 
 2️⃣ Improve Difficult Classes
 
@@ -142,7 +132,7 @@ Class-weighted loss functions
 
 Oversampling minority classes
 
-Focused augmentation per weak class
+Focused augmentation
 
 3️⃣ Advanced Architectures
 
@@ -150,17 +140,17 @@ Transfer Learning (ResNet, EfficientNet)
 
 Deeper CNNs
 
-Batch Normalization layers
+Batch Normalization
 
 4️⃣ Deployment Ideas
 
 🔤 Web-based Amharic OCR system
 
-📱 Mobile character recognition app
+📱 Mobile recognition app
 
-📝 Amharic handwriting recognition tool
+📝 Handwriting recognition tool
 
-🧾 Document digitization system
+🧾 Amharic document digitization system
 
 🏗️ Tech Stack
 
@@ -176,21 +166,12 @@ Matplotlib
 
 Scikit-learn
 
-📌 Conclusion
+🎯 Project Highlights
 
-Both TensorFlow and PyTorch successfully built strong CNN models for Amharic character recognition.
-
-While both models achieved reasonable performance (~70%+ accuracy), TensorFlow demonstrated slightly better generalization across evaluation metrics.
-
-However, the task remains challenging due to:
-
-Large number of classes
-
-Visual similarity between characters
-
-Data imbalance
-
-This project demonstrates a complete end-to-end deep learning workflow and framework comparison for a real-world multi-class classification problem.
+✔ Cross-framework comparison (TensorFlow vs PyTorch)
+✔ Large-scale multi-class classification (237 classes)
+✔ Evaluation beyond accuracy (Macro & Weighted F1-score)
+✔ Real-world language-focused AI application
 
 👨‍💻 Author
 
