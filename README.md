@@ -1,4 +1,4 @@
-🇪🇹 Amharic Character Recognition using TensorFlow & PyTorch
+## 🇪🇹 Amharic Character Recognition using TensorFlow & PyTorch
 
 A deep learning project that builds and compares CNN-based Amharic character classifiers using both TensorFlow and PyTorch frameworks.
 This project performs a full pipeline from preprocessing to evaluation and provides a detailed comparative performance analysis.
