@@ -47,12 +47,6 @@ If you prefer to run locally, install the dependencies listed in the third secti
 
 TensorFlow exhibits slightly better generalization across all metrics. Both models still show overfitting: validation accuracy plateaus early and validation loss climbs after epoch 5 (TensorFlow) / epoch 7 (PyTorch).
 
-## Insights & Next Steps
-- Dropout, L1/L2 regularization, and stronger augmentation may tame overfitting and improve rare-class recall.
-- Class-weighted losses or oversampling strategies can help with the extreme imbalance among 237 characters.
-- Advanced backbones (ResNet, EfficientNet) or transfer learning from larger vision datasets may deliver better global representations.
-- Consider packaging the trained weights into a web or mobile OCR demo for Amharic script.
-
 ## Notebook Contents
 - `amharic_chartr_classifier1.ipynb`: Colab-ready notebook containing all data prep, TensorFlow and PyTorch modeling, evaluation, and visualization steps. The first cells focus on drive mounting and dataset unpacking, while the bulk builds the learning pipeline.
 
