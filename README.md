@@ -18,6 +18,8 @@ A single notebook that walks through building and comparing Convolutional Neural
 
 The notebook expects a pre-extracted dataset folder. The original archive is stored on Google Drive as `uni_dataset.rar` and is extracted into `/content/uni_dataset/` inside Colab.
 
+The repository also tracks `uni_dataset.zip`, a compressed version of the same 37,652 Amharic character images that the notebook classifies. You can unzip it locally and point the notebook’s data loaders to the extracted folder instead of downloading from Drive.
+
 ## Pipeline Highlights
 1. Mount Google Drive and install `unrar` to extract the dataset (see the first cells in the notebook).
 2. Standardize the images into tensors/arrays for TensorFlow and PyTorch loaders.
