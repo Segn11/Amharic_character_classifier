@@ -50,5 +50,3 @@ TensorFlow exhibits slightly better generalization across all metrics. Both mode
 ## Notebook Contents
 - `amharic_chartr_classifier1.ipynb`: Colab-ready notebook containing all data prep, TensorFlow and PyTorch modeling, evaluation, and visualization steps. The first cells focus on drive mounting and dataset unpacking, while the bulk builds the learning pipeline.
 
-## Author
-Segni Nadew · Machine Learning Engineer / Data Scientist
